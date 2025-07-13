@@ -1,45 +1,25 @@
 const educationHistory = [
   {
-    id: 1,
+    institution: "Universitas AMIKOM Yogyakarta",
+    major: "S1 - Informatika",
     period: "2022 - Sekarang",
-    institution: "Universitas Gadjah Mada",
-    major: "S1 - Teknik Informatika",
   },
-  {
-    id: 2,
-    period: "2019 - 2022",
-    institution: "SMA Negeri 1 Teladan Yogyakarta",
-    major: "MIPA",
-  },
+  { institution: "SMA Negeri 1 Contoh", major: "MIPA", period: "2019 - 2022" },
 ];
-
 const skills = [
-  { name: "Vue.js", level: "Mahir" },
-  { name: "JavaScript", level: "Mahir" },
-  { name: "Tailwind CSS", level: "Mahir" },
-  { name: "Node.js", level: "Menengah" },
-
-  { name: "Express.js", level: "Menengah" },
-  { name: "PostgreSQL", level: "Menengah" },
-  { name: "Git & GitHub", level: "Mahir" },
-  { name: "HTML5 & CSS3", level: "Mahir" },
+  { name: "Vue.js", level: "Menengah" },
+  { name: "JavaScript", level: "Menengah" },
+  { name: "Node.js", level: "Pemula" },
+  { name: "Express.js", level: "Pemula" },
 ];
-
 const projects = [
   {
-    title: "Website Toko Online",
-    image: "https://via.placeholder.com/500x300?text=Proyek+1",
-    description: "Platform e-commerce dengan fitur keranjang belanja.",
-    tech: ["Vue.js", "Express.js", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    title: "Aplikasi Manajemen Tugas",
-    image: "https://via.placeholder.com/500x300?text=Proyek+2",
-    description: "Aplikasi untuk melacak progres tugas harian.",
-    tech: ["React", "Firebase"],
+    title: "Website Portofolio Responsi",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    description:
+      "Website portofolio pribadi yang dibangun sebagai syarat kelulusan Responsi.",
+    tech: ["Vue.js", "Express.js", "Vercel"],
     link: "#",
   },
 ];
-
 module.exports = { educationHistory, skills, projects };
