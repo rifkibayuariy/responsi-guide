@@ -4,7 +4,7 @@ const { sql } = require("@vercel/postgres");
 const app = express();
 app.use(cors());
 // Endpoint API yang akan mengambil data dari Database
-app.get("/api/education", async (req, res) => {
+app.get("/education", async (req, res) => {
   try {
     const { rows } = await sql`SELECT * FROM education ORDER BY period
 DESC;`;
@@ -13,7 +13,7 @@ DESC;`;
     res.status(500).json({ error: "Gagal mengambil data pendidikan" });
   }
 });
-app.get("/api/skills", async (req, res) => {
+app.get("/skills", async (req, res) => {
   try {
     const { rows } = await sql`SELECT * FROM skills;`;
     res.status(200).json(rows);
@@ -21,13 +21,17 @@ app.get("/api/skills", async (req, res) => {
     res.status(500).json({ error: "Gagal mengambil data skill" });
   }
 });
-app.get("/api/projects", async (req, res) => {
+app.get("/projects", async (req, res) => {
   try {
     const { rows } = await sql`SELECT * FROM projects;`;
     res.status(200).json(rows);
   } catch (error) {
     res.status(500).json({ error: "Gagal mengambil data proyek" });
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("Backend API is running.");
 });
 
 module.exports = app;
