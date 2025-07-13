@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/index.js"
-    },
-    {
-      "source": "/((?!api/|.*\\..*).*)",
-      "destination": "/index.html"
+      "source": "/testing",
+      "destination": "https://google.com",
+      "permanent": false
     }
   ]
 }
